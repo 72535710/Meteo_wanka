@@ -107,7 +107,7 @@ def obtener_y_guardar_clima():
 async def run_in_thread(fn, *args, **kwargs):
     return await asyncio.to_thread(fn, *args, **kwargs)
 
-
+# Mejoras API Meteo Wanka - Rama feature-api
 @app.on_event('startup')
 def start_scheduler():
     if not scheduler.running:
