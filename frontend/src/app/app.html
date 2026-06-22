@@ -1,0 +1,73 @@
+<div class="container">
+
+  <header>
+
+    <h1>🌦️ Meteo Wanka</h1>
+
+    <h2 *ngIf="clima">
+      📍 {{ clima.ciudad }}
+    </h2>
+    <img
+  *ngIf="clima"
+  [src]="'https://openweathermap.org/img/wn/' + clima.icono + '@2x.png'"
+  alt="Clima"
+    >
+
+    <p class="hora">
+      🕒 {{ horaActual }}
+    </p>
+
+    <p class="descripcion" *ngIf="clima">
+      ☁️ {{ clima.descripcion }}
+    </p>
+
+    <p class="mensaje" *ngIf="cargando && !clima">
+      Cargando clima de Huancayo...
+    </p>
+
+    <p class="mensaje error" *ngIf="error">
+      {{ error }}
+    </p>
+  </header>
+
+  <div class="cards" *ngIf="clima && !cargando">
+
+    <div class="card">
+      <h3>🌡️ Temperatura</h3>
+      <p>{{ clima.temperatura }} °C</p>
+    </div>
+
+    <div class="card">
+      <h3>💧 Humedad</h3>
+      <p>{{ clima.humedad }} %</p>
+    </div>
+
+    <div class="card">
+      <h3>🌬️ Viento</h3>
+      <p>{{ clima.viento }} m/s</p>
+    </div>
+
+  </div>
+
+  <div class="alerta" *ngIf="clima">
+
+    <h2>🚨 Estado Agrícola</h2>
+
+    <p>
+      {{ clima.alerta }}
+    </p>
+
+  </div>
+ <div class="card-grafica">
+
+    <h2>📊 Temperatura Histórica</h2>
+
+    <p>
+      Registros almacenados:
+      {{ historico.length }}
+    </p>
+
+    <canvas #graficaTemperatura></canvas>
+
+  </div>
+</div>

@@ -1,0 +1,100 @@
+.container{
+    min-height:100vh;
+    padding:30px;
+    background:linear-gradient(
+        135deg,
+        #4facfe,
+        #00f2fe
+    );
+}
+
+header{
+    text-align:center;
+    color:white;
+    margin-bottom:40px;
+}
+
+header h1{
+    font-size:3rem;
+    margin-bottom:10px;
+}
+
+.hora{
+    font-size:1.2rem;
+}
+
+.descripcion{
+    font-size:1.3rem;
+    font-weight:bold;
+}
+
+.cards{
+    display:flex;
+    justify-content:center;
+    gap:25px;
+    flex-wrap:wrap;
+}
+
+.card{
+    width:250px;
+    background:white;
+    border-radius:15px;
+    padding:25px;
+    text-align:center;
+    box-shadow:0 5px 15px rgba(0,0,0,0.2);
+}
+
+.card p{
+    font-size:2rem;
+    font-weight:bold;
+}
+
+.alerta{
+    max-width:500px;
+    margin:30px auto;
+    background:white;
+    padding:20px;
+    border-radius:15px;
+    text-align:center;
+    box-shadow:0 5px 15px rgba(0,0,0,0.2);
+}
+
+.card-grafica{
+    max-width:900px;
+    margin:20px auto;
+    background:white;
+    padding:20px;
+    border-radius:12px;
+    box-shadow:0 5px 15px rgba(0,0,0,0.15);
+}
+
+.card-grafica canvas{
+    width: 100% !important;
+    height: 400px !important;
+    display: block;
+}
+
+.mensaje{
+    color: white;
+    font-size: 1rem;
+    margin-top: 10px;
+}
+
+.mensaje.error{
+    color: #ffdede;
+    font-weight: bold;
+}
+
+header img{
+    width:120px;
+    height:120px;
+}
+.card-grafica {
+  height: 500px;
+  position: relative;
+}
+
+.card-grafica canvas {
+  width: 100% !important;
+  height: 400px !important;
+}

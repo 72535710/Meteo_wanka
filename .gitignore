@@ -1,0 +1,16 @@
+# Python
+venv/
+.venv/
+__pycache__/
+*.pyc
+
+# Angular
+node_modules/
+.angular/
+dist/
+
+# VS Code
+.vscode/
+
+# Logs
+*.log
